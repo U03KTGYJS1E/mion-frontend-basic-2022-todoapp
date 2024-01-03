@@ -27,7 +27,7 @@ const Button = styled.button`
     height: 100%;
   }
 
-  &:hover {
+  :hover {
     background-color: ${COLOR.LIGHT_GRAY_TRANSLUCENT};
   }
 `;
