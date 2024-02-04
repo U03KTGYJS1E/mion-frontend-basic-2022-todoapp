@@ -10,10 +10,9 @@ export const Title = () => {
 };
 const StyledText = styled.div`
   color: ${COLOR.WHITE};
-  font-family: ${FONT_FAMILY.ROBOTO};
   ${TEXT.L};
-  @media screen and (max-width: ${BREAKPOINT.MEDIUM}) {
-    font-family: ${FONT_FAMILY.NOTO_SANS};
+  @media (max-width: ${BREAKPOINT.MEDIUM}) {
+    font-family: ${FONT_FAMILY.ROBOTO};
     ${TEXT.M};
   }
 `;
