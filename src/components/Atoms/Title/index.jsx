@@ -13,7 +13,6 @@ const StyledText = styled.div`
   ${TEXT.L};
   font-family: ${FONT_FAMILY.ROBOTO};
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
-    font-family: ${FONT_FAMILY.NOTO_SANS};
     ${TEXT.M};
   }
 `;
