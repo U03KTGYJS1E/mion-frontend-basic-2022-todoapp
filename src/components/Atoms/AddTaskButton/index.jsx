@@ -7,15 +7,14 @@ import FONT_FAMILY from "../../../variables/font_family";
 
 export const AddTaskButton = (props) => {
   return (
-    <Button onClick={props.onClick}>
+    <StyledAddTaskButton onClick={props.onClick}>
       <img src={plus} className="button" />
       <div className="task">タスクを追加</div>
-    </Button>
+    </StyledAddTaskButton>
   );
 };
-export default AddTaskButton;
 
-const Button = styled.button`
+const StyledAddTaskButton = styled.button`
   display: flex;
   padding: 2px, 6px;
   background: none;
