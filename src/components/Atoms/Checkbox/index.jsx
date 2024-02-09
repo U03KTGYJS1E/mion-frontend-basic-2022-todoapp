@@ -5,14 +5,14 @@ import COLOR from "../../../variables/color";
 
 export const Checkbox = ({ onClick }) => {
   return (
-    <Button onClick={onClick}>
+    <StyledCheckbox onClick={onClick}>
       <img src={check} className="check" />
-    </Button>
+    </StyledCheckbox>
   );
 };
 export default Checkbox;
 
-const Button = styled.button`
+const StyledCheckbox = styled.button`
   border: 2px solid ${COLOR.LIGHT_GRAY};
   border-radius: 2px;
   background: none;
