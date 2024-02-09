@@ -5,14 +5,14 @@ import COLOR from "../../../variables/color";
 
 export const EditButton = ({ onClick }) => {
   return (
-    <Button onClick={onClick}>
+    <StyledButton onClick={onClick}>
       <img src={pencil} />
-    </Button>
+    </StyledButton>
   );
 };
 export default EditButton;
 
-const Button = styled.button`
+const StyledButton = styled.button`
   border: none;
   cursor: pointer;
   width: 20px;
@@ -20,7 +20,8 @@ const Button = styled.button`
   background: none;
   padding: 0;
   border-radius: 50%;
-  transition: 0.2s;
+  outline: none;
+  transition: 0.2s ease;
 
   img {
     width: 100%;
