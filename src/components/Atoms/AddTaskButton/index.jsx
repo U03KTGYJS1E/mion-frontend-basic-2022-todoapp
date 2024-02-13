@@ -5,11 +5,11 @@ import COLOR from "../../../variables/color";
 import TEXTS from "../../../variables/texts";
 import FONT_FAMILY from "../../../variables/font_family";
 
-export const AddTaskButton = (props) => {
+export const AddTaskButton = ({ onClick }) => {
   return (
-    <StyledAddTaskButton onClick={props.onClick}>
-      <img src={plus} className="button" />
-      <div className="task">タスクを追加</div>
+    <StyledAddTaskButton onClick={onClick}>
+      <img src={plus} className="PlusButton" />
+      <div className="AddTask">タスクを追加</div>
     </StyledAddTaskButton>
   );
 };
@@ -28,11 +28,11 @@ const StyledAddTaskButton = styled.button`
     background-color: ${COLOR.GREEN_TRANSLUCENT};
     border-radius: 12px;
   }
-  .button {
+  .PlusButton {
     width: 20px;
     height: 20px;
   }
-  .task {
+  .AddTask {
     color: ${COLOR.GREEN};
     ${TEXTS.S}
     font-family: ${FONT_FAMILY.NOTO_SANS};
