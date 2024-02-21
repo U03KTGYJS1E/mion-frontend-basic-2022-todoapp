@@ -16,9 +16,11 @@ export const AddTaskButton = ({ onClick }) => {
 
 const StyledAddTaskButton = styled.button`
   display: flex;
+  height: 24px;
   padding: 2px, 6px;
   background: none;
   border: none;
+  outline: none;
   transition: 0.2s ease;
   justify-content: center;
   align-items: center;
@@ -28,13 +30,14 @@ const StyledAddTaskButton = styled.button`
     background-color: ${COLOR.GREEN_TRANSLUCENT};
     border-radius: 12px;
   }
-  .StyledImg {
-    width: 20px;
-    height: 20px;
-  }
-  .StyledButton {
-    color: ${COLOR.GREEN};
-    ${TEXTS.S}
-    font-family: ${FONT_FAMILY.NOTO_SANS};
-  }
+`;
+const StyledImg = styled.img`
+  width: 20px;
+  height: 20px;
+`;
+
+const StyledButton = styled.div`
+  color: ${COLOR.GREEN};
+  ${TEXT.S}
+  font-family: ${FONT_FAMILY.NOTO_SANS};
 `;
