@@ -24,8 +24,6 @@ const StyledAddTaskButton = styled.button`
   align-items: center;
   padding: 2px 6px;
   height: 24px;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   :hover {
     background-color: ${COLOR.GREEN_TRANSLUCENT};
