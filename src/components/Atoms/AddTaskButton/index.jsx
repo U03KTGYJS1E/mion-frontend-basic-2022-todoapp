@@ -15,16 +15,17 @@ export const AddTaskButton = ({ onClick }) => {
 };
 
 const StyledAddTaskButton = styled.button`
-  display: flex;
-  height: 24px;
-  padding: 2px, 6px;
-  background: none;
   border: none;
   outline: none;
+  cursor: pointer;
+  background: none;
   transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  height: 24px;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   gap: 10px;
   :hover {
     background-color: ${COLOR.GREEN_TRANSLUCENT};
