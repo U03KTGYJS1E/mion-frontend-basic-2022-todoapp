@@ -9,7 +9,7 @@ export const AddTaskButton = ({ onClick }) => {
   return (
     <StyledAddTaskButton onClick={onClick}>
       <StyledImg src={plus} />
-      <StyledButton>タスクを追加</StyledButton>
+      <Text>タスクを追加</Text>
     </StyledAddTaskButton>
   );
 };
@@ -35,7 +35,7 @@ const StyledImg = styled.img`
   height: 20px;
 `;
 
-const StyledButton = styled.div`
+const Text = styled.span`
   color: ${COLOR.GREEN};
   ${TEXT.S}
   font-family: ${FONT_FAMILY.NOTO_SANS};
