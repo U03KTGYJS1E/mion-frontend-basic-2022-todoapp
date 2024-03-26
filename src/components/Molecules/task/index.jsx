@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { CheckBox } from "../../Atoms/CheckBox/index";
-import { EditButton } from "../../Atoms/EditButton/index";
-import { Input } from "../../Atoms/Input/index";
+import Checkbox from "../../Atoms/Checkbox/index";
+import EditButton from "../../Atoms/EditButton/index";
+import Input from "../../Atoms/Input/index";
 import styled from "styled-components";
+import TEXT from "../../../variables/texts";
+import COLOR from "../../../variables/color";
 
 export const Task = ({
   onTaskNameChange,
@@ -17,14 +19,14 @@ export const Task = ({
     onTaskNameChange(value);
   };
 
-  const onEditButtonClick = (e) => {
+  const onEditButtonClick = () => {
     setIsEditing(true);
   };
 
   return (
     <StyledWrapper>
       <StyledCheckboxWrapper>
-        <CheckBox onClick={onTaskComplete} />
+        <Checkbox onClick={onTaskComplete} />
       </StyledCheckboxWrapper>
       {isEditing ? (
         <Input onEditComplete={onEditComplete} defaultValue={taskName} />
@@ -39,12 +41,10 @@ export const Task = ({
     </StyledWrapper>
   );
 };
-export default Task;
 
 const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 2px 6px;
   overflow: hidden;
-  gap: 10px;
 `;
