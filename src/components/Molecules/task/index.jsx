@@ -3,9 +3,6 @@ import { CheckBox } from "../../Atoms/CheckBox/index";
 import { EditButton } from "../../Atoms/EditButton/index";
 import { Input } from "../../Atoms/Input/index";
 import styled from "styled-components";
-import COLOR from "../../../variables/color";
-import TEXT from "../../../variables/texts";
-import FONTFAMILY from "../../../variables/texts";
 
 export const Task = ({
   onTaskNameChange,
