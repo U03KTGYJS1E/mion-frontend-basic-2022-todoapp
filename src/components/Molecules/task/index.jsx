@@ -6,22 +6,22 @@ import styled from "styled-components";
 import TEXT from "../../../variables/texts";
 import COLOR from "../../../variables/color";
 
-export const Task = ({
+export function Task({
   onTaskNameChange,
   onTaskComplete,
   taskName = "",
-  defaultEditing = false,
-}) => {
-  const [isEditing, setIsEditing] = useState(defaultEditing);
+  defaultIsEditing = false,
+}) {
+  const [isEditing, setIsEditing] = useState(defaultIsEditing);
 
   const onEditComplete = (value) => {
     setIsEditing(false);
     onTaskNameChange(value);
   };
 
-  const onEditButtonClick = () => {
+  function onEditButtonClick() {
     setIsEditing(true);
-  };
+  }
 
   return (
     <StyledWrapper>
@@ -40,7 +40,7 @@ export const Task = ({
       )}
     </StyledWrapper>
   );
-};
+}
 
 const StyledWrapper = styled.div`
   display: flex;

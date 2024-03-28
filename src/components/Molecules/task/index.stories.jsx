@@ -5,6 +5,7 @@ export default { component: Task };
 export const Default = {
   args: {
     taskName: "taskname",
+
     onTaskComplete: () => {
       console.log("task completed");
     },
