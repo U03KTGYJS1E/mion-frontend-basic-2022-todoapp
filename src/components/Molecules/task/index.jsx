@@ -48,3 +48,7 @@ const StyledWrapper = styled.div`
   padding: 2px 6px;
   overflow: hidden;
 `;
+const StyledCheckboxWrapper = styled.div``;
+const StyledNameAndButtonWrapper = styled.div``;
+const StyledTaskName = styled.div``;
+const StyledEditButtonWrapper = styled.div``;
