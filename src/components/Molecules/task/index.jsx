@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import Checkbox from "../../Atoms/Checkbox/index";
-import EditButton from "../../Atoms/EditButton/index";
-import Input from "../../Atoms/Input/index";
+import { Checkbox } from "../../Atoms/Checkbox/index";
+import { EditButton } from "../../Atoms/EditButton/index";
+import { Input } from "../../Atoms/Input/index";
 import styled from "styled-components";
 import TEXT from "../../../variables/texts";
 import COLOR from "../../../variables/color";
 
-export function Task({
+export const Task = ({
   onTaskNameChange,
   onTaskComplete,
-  taskName = "",
+  taskName = "taskname",
   defaultIsEditing = false,
-}) {
+}) => {
   const [isEditing, setIsEditing] = useState(defaultIsEditing);
 
   const onEditComplete = (value) => {
@@ -19,9 +19,9 @@ export function Task({
     onTaskNameChange(value);
   };
 
-  function onEditButtonClick() {
+  const onEditButtonClick = () => {
     setIsEditing(true);
-  }
+  };
 
   return (
     <StyledWrapper>
@@ -40,15 +40,36 @@ export function Task({
       )}
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 2px 6px;
-  overflow: hidden;
 `;
-const StyledCheckboxWrapper = styled.div``;
-const StyledNameAndButtonWrapper = styled.div``;
-const StyledTaskName = styled.div``;
-const StyledEditButtonWrapper = styled.div``;
+
+const StyledCheckboxWrapper = styled.div`
+  margin-right: 10px;
+`;
+
+const StyledNameAndButtonWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex: auto;
+`;
+
+const StyledTaskName = styled.div`
+  ${TEXT.S}
+  color: ${COLOR.LIGHT_GRAY};
+  flex: auto;
+  margin-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
+
+const StyledEditButtonWrapper = styled.div`
+  flex: 0;
+  display: flex;
+  align-items: center;
+`;
