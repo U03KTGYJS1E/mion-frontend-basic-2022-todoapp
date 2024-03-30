@@ -5,11 +5,12 @@ import { Input } from "../../Atoms/Input/index";
 import styled from "styled-components";
 import TEXT from "../../../variables/texts";
 import COLOR from "../../../variables/color";
+import FONT_FAMILY from "../../../variables/font_family";
 
 export const Task = ({
   onTaskNameChange,
   onTaskComplete,
-  taskName = "taskname",
+  taskName = "",
   defaultIsEditing = false,
 }) => {
   const [isEditing, setIsEditing] = useState(defaultIsEditing);
@@ -59,6 +60,7 @@ const StyledNameAndButtonWrapper = styled.div`
 `;
 
 const StyledTaskName = styled.div`
+  font-family: ${FONT_FAMILY.NOTO_SANS};
   ${TEXT.S}
   color: ${COLOR.LIGHT_GRAY};
   flex: auto;

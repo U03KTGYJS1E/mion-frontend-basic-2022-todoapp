@@ -8,8 +8,8 @@ export const Default = {
       console.log("task completed");
     },
 
-    onTaskNameChange: () => {
-      console.log("taskname changed");
+    onTaskNameChange: (value) => {
+      console.log("taskname changed:" + value);
     },
     taskName: "taskname",
     defaultIsEditing: false,
