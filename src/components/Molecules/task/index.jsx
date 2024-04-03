@@ -57,6 +57,7 @@ const StyledNameAndButtonWrapper = styled.div`
   display: flex;
   align-items: center;
   flex: auto;
+  overflow: hidden;
 `;
 
 const StyledTaskName = styled.div`
@@ -67,6 +68,7 @@ const StyledTaskName = styled.div`
   margin-right: 10px;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 const StyledEditButtonWrapper = styled.div`
