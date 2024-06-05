@@ -16,12 +16,12 @@ export const TodoCard = () => {
   };
 
   const onTaskComplete = (index) => {
-    let newTaskList = taskList.filter((value, index) => index != index);
+    const newTaskList = taskList.filter((value, Index) => Index !== index);
     setTaskList(newTaskList);
   };
 
   const onTaskNameChange = (value, index) => {
-    let newTaskList = [...taskList];
+    const newTaskList = [...taskList];
     if (value === "") {
       newTaskList.splice(index, 1);
     } else {
@@ -32,7 +32,6 @@ export const TodoCard = () => {
     }
     setTaskList(newTaskList);
   };
-
   useEffect(() => {
     const Tasks = localStorage.getItem("tasks");
     if (Tasks !== null) {
@@ -71,14 +70,11 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 10px;
 `;
 
 const StyledTaskList = styled.div`
   display: flex;
   flex-direction: column;
   align-self: stretch;
-
-  & > * {
-    margin-top: 10px;
-  }
 `;
