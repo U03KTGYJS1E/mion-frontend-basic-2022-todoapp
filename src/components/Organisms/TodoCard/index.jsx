@@ -44,6 +44,7 @@ export const TodoCard = () => {
     const stringifyTaskList = JSON.stringify(taskList);
     localStorage.setItem("tasks", stringifyTaskList);
   }, [taskList]);
+  //Local Storage
 
   return (
     <StyledWrapper>
