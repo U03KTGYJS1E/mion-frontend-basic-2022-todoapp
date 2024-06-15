@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import { AddTaskButton } from "../../Atoms/AddTaskButton/index";
@@ -21,7 +21,7 @@ export const TodoCard = () => {
   };
 
   const onTaskNameChange = (value, index) => {
-    let newTaskList = [...taskList];
+    const newTaskList = [...taskList];
     if (value === "") {
       newTaskList.splice(index, 1);
     } else {
@@ -32,6 +32,19 @@ export const TodoCard = () => {
     }
     setTaskList(newTaskList);
   };
+  useEffect(() => {
+    const Tasks = localStorage.getItem("tasks");
+    if (Tasks !== null) {
+      const parseTaskList = JSON.parse(Tasks);
+      setTaskList(parseTaskList);
+    }
+  }, []);
+
+  useEffect(() => {
+    const stringifyTaskList = JSON.stringify(taskList);
+    localStorage.setItem("tasks", stringifyTaskList);
+  }, [taskList]);
+  //Local Storage
 
   return (
     <StyledWrapper>
@@ -58,14 +71,11 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 10px;
 `;
 
 const StyledTaskList = styled.div`
   display: flex;
   flex-direction: column;
   align-self: stretch;
-
-  & > * {
-    margin-top: 10px;
-  }
 `;
