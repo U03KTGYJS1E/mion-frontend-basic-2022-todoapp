@@ -16,7 +16,7 @@ export const TodoCard = () => {
   };
 
   const onTaskComplete = (index) => {
-    const newTaskList = taskList.filter((value, Index) => Index !== index);
+    let newTaskList = taskList.filter((value, Index) => Index !== index);
     setTaskList(newTaskList);
   };
 
