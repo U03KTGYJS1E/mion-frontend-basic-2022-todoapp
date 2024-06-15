@@ -3,6 +3,7 @@ import styled from "styled-components";
 import BREAKPOINT from "../../../variables/breakpoint";
 import { Title } from "../../Atoms/Title";
 import { TodoCard } from "../../Organisms/TodoCard";
+
 export const MainPage = () => {
   return (
     <StyledWrapper>
@@ -30,6 +31,7 @@ const StyledTodoCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+
   @media (min-width: ${BREAKPOINT.MEDIUM}) {
     width: 500px;
   }
