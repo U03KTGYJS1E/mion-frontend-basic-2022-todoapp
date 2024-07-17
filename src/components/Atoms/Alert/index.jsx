@@ -1,10 +1,15 @@
 import React from "react";
-import styled, { keyframes, css } from "styled-components";
+import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import BREAKPOINT from "../../../variables/breakpoint";
+import FONTFAMILY from "../../../variables/font_family";
+import TEXT from "../../../variables/texts";
 
 const TextAlert = styled.div`
   color: ${COLOR.WHITE};
+  font-family: ${FONTFAMILY.NOTO_SANS};
+  ${TEXT.S};
+  line-height: 40px;
 `;
 
 export const Alert = ({ isActive }) => {
@@ -17,13 +22,15 @@ export const Alert = ({ isActive }) => {
 
 const DisplayAlert = styled.div`
   opacity: ${(props) => (props.isActive ? 1 : 0)};
-  top: 80px;
-  width: 400px;
   display: flex;
   margin: 0 auto;
   background: ${COLOR.RED};
+  margin-top: 80px;
+  height: 40px;
+  padding: 10px 20px;
+  width: 400px;
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
-    top: 40px;
+    margin-top: 40px;
     width: 100%;
   }
 `;
