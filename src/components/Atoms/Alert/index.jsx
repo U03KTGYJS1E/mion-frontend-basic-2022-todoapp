@@ -12,10 +12,11 @@ const TextAlert = styled.div`
   line-height: 40px;
 `;
 
-export const Alert = ({ isActive }) => {
+/*テキスト表示*/
+export const Alert = ({ isActive, isActiveText }) => {
   return (
     <DisplayAlert isActive={isActive}>
-      <TextAlert isActive={isActive}>タスク名なし</TextAlert>
+      <TextAlert isActive={isActive}>{isActiveText}</TextAlert>
     </DisplayAlert>
   );
 };
