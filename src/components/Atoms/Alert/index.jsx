@@ -37,5 +37,3 @@ const DisplayAlert = styled.div`
     width: 100%;
   }
 `;
-
-export default Alert;
