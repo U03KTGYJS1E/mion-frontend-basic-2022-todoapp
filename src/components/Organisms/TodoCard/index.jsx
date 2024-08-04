@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import { AddTaskButton } from "../../Atoms/AddTaskButton/index";
 import { Task } from "../../Molecules/task/index";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
 
 export const TodoCard = () => {
+  const AlertHandlerContext = useAlertHandlerContext();
   const [taskList, setTaskList] = useState([]);
 
   const onAddTaskButtonClick = () => {
@@ -24,6 +26,7 @@ export const TodoCard = () => {
     let newTaskList = [...taskList];
     if (value === "") {
       newTaskList.splice(index, 1);
+      AlertHandlerContext.setAlert("タスクの名前が設定されていません。");
     } else {
       newTaskList.splice(index, 1, {
         name: value,
@@ -32,6 +35,16 @@ export const TodoCard = () => {
     }
     setTaskList(newTaskList);
   };
+
+  useEffect(() => {
+    const latest = JSON.parse(localStorage.getItem("storage"));
+    if (latest === null) return;
+    setTaskList(latest);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("storage", JSON.stringify(taskList));
+  }, [taskList]);
 
   return (
     <StyledWrapper>
