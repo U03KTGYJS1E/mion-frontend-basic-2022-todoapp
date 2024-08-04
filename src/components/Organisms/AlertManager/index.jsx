@@ -11,5 +11,10 @@ export const AlertManager = () => {
   console.log(AlertHandlerContext.visible);
   AlertHandlerContext.setAlert("message"); //Alertの表示
 
-  return <Alert isActive={AlertHandlerContext.visible} />;
+  return (
+    <Alert
+      isActive={AlertHandlerContext.visible}
+      isActiveText={AlertHandlerContext.errorText}
+    />
+  );
 };

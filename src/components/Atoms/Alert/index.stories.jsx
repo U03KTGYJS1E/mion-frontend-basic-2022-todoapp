@@ -6,5 +6,5 @@ export default {
 };
 
 export const Default = {
-  args: { isActive: true },
+  args: { isActive: true, isActiveText: "text" },
 };
