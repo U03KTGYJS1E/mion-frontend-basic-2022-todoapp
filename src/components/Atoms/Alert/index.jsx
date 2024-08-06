@@ -24,7 +24,7 @@ export const Alert = ({ isActive, isActiveText }) => {
 const DisplayAlert = styled.div`
   opacity: ${(props) => (props.isActive ? 1 : 0)};
   transition: 0.5s;
-  transform: translate(-50%, 0);
+  transform: translate(0px, -40px);
   display: flex;
   margin: 0 auto;
   background: ${COLOR.RED};
