@@ -24,16 +24,22 @@ export const Alert = ({ isActive, isActiveText }) => {
 const DisplayAlert = styled.div`
   opacity: ${(props) => (props.isActive ? 1 : 0)};
   transition: 0.5s;
-  transform: translate(0px, -40px);
+  transform: translate(-50%, 0);
   display: flex;
   margin: 0 auto;
   background: ${COLOR.RED};
-  margin-top: 80px;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0%);
   height: 40px;
   padding: 10px 20px;
   width: 400px;
+  border-radius: 4px;
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
-    margin-top: 40px;
+    top: 40px;
     width: 100%;
+    max-width: 400px;
+    margin: 0px 20px;
   }
 `;
