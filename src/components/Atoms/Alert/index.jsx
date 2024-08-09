@@ -9,7 +9,7 @@ const TextAlert = styled.div`
   color: ${COLOR.WHITE};
   font-family: ${FONTFAMILY.NOTO_SANS};
   ${TEXT.S};
-  line-height: 40px;
+  padding: 10px 20px;
 `;
 
 /*テキスト表示*/
@@ -33,7 +33,6 @@ const DisplayAlert = styled.div`
   left: 50%;
   transform: translate(-50%, 0%);
   height: 40px;
-  padding: 10px 20px;
   width: 400px;
   border-radius: 4px;
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
